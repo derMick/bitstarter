@@ -3,14 +3,8 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  //var file = fs.readFileSync('index.html');
-  //var buffer = new Buffer(file.length);
-  //buffer = file;
-  //buffer.toString('utf8');
-  
   buffer = new Buffer(fs.readFileSync('index.html'));
   response.send(buffer.toString('utf8'));
-  //response.send('Hello World2!');
 
 });
 
